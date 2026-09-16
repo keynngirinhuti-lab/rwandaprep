@@ -1,0 +1,701 @@
+/* ==========================================================================
+   1. CORE VARIABLES & RESETS
+   ========================================================================== */
+   :root {
+    /* Brand Colors */
+    --primary-blue: #00A1DE;   /* Rwanda Blue */
+    --rwanda-yellow: #FAD201; /* Rwanda Yellow */
+    --rwanda-green: #20603D;  /* Rwanda Green */
+    
+    /* UI Colors */
+    --text-dark: #1a1a1a;
+    --text-muted: #555;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    
+    /* Elevation & Effects */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+ 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.main-header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+ 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+ 
+.logo span {
+    color: var(--rwanda-green);
+}
+ 
+.search-container input {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    width: 280px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+ 
+.search-container input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 5px rgba(0, 161, 222, 0.2);
+}
+ 
+/* Breadcrumbs */
+.breadcrumb-nav {
+    padding: 1rem 5%;
+    background: #fff;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+ 
+.breadcrumb-nav a:hover { 
+    color: var(--primary-blue); 
+}
+ 
+/* ==========================================================================
+   3. HERO SECTIONS
+   ========================================================================== */
+/* Main Hero & Archive Hero Shared Styles */
+.hero, .archive-hero {
+    background: linear-gradient(135deg, var(--primary-blue), var(--rwanda-green));
+    text-align: center;
+    color: var(--white);
+}
+ 
+.hero {
+    padding: 4rem 5% 6rem 5%;
+}
+ 
+.archive-hero {
+    padding: 2.5rem 5%;
+}
+ 
+.hero-content h1, .archive-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+ 
+.hero-content p, .archive-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+ 
+/* ==========================================================================
+   4. PORTAL GRID (HOMEPAGE)
+   ========================================================================== */
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+.portal-card {
+    position: relative;
+    background: var(--white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.portal-card:hover {
+    transform: translateY(-8px);
+}
+ 
+.portal-card.disabled {
+    opacity: 0.8;
+    cursor: default;
+}
+ 
+/* Focus Features */
+.focus-card {
+    border: 2px solid var(--rwanda-yellow);
+    box-shadow: 0 10px 30px rgba(250, 210, 1, 0.2);
+}
+ 
+.focus-badge {
+    position: absolute;                        
+    top: 15px;
+    right: 15px;
+    background: var(--rwanda-yellow);
+    color: var(--text-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    
+}
+ 
+/* ==========================================================================
+   5. ARCHIVE COMPONENTS (NATIONAL/DISTRICT)
+   ========================================================================== */
+/* Level Switcher */
+.level-switcher-section {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: center;
+}
+ 
+.switcher-container {
+    background: #e0e0e0;
+    padding: 5px;
+    border-radius: 12px;
+    display: flex;
+    gap: 5px;
+}
+ 
+.level-btn {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    background: transparent;
+    color: var(--text-dark);
+}
+ 
+.level-btn.active {
+    background: var(--rwanda-green);
+    color: white;
+}
+ 
+/* Subject Grid & Cards */
+.subject-grid-section {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+ 
+.subject-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 2px solid rgba(0, 161, 222, 0.3);
+}
+
+ 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+ 
+/* ==========================================================================
+   6. BUTTONS & DOWNLOAD ACTIONS
+   ========================================================================== */
+/* General Utility Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    margin-top: 1rem;
+    transition: filter 0.2s;
+    cursor: pointer;
+    border: none;
+}
+ 
+.btn-blue   { background-color: var(--primary-blue); }
+.btn-green  { background-color: var(--rwanda-green); }
+.btn-purple { background-color: #6c5ce7;}
+.btn-grey   { background-color: #155d8e;}
+ 
+.btn:hover {
+    filter: brightness(1.1);
+}
+ 
+/* Paper List Action Buttons */
+.paper-list {
+    list-style: none;
+}
+ 
+.paper-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+ 
+.year { 
+    font-weight: 700; 
+    color: var(--text-dark); 
+}
+ 
+.actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+ 
+.download-link {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    min-height: 40px; /* Thumb-friendly mobile targets */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+ 
+.download-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+ 
+/* Download Link Variants */
+.download-link.view {
+    background: var(--primary-blue);
+    color: white;
+    border: 1px solid var(--primary-blue);
+}
+ 
+.download-link.download {
+    background: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
+ 
+.download-link.scheme {
+    background: #f0fff4;
+    color: var(--rwanda-green);
+    border: 1px solid transparent;
+}
+.download-link.disabled-link {
+    background: #f5f5f5 !important; /* Very light grey */
+    color: #aaa !important;        /* Muted text */
+    border: 1px solid #ddd !important;
+    cursor: not-allowed;
+    pointer-events: none;          /* Makes the link unclickable */
+    opacity: 0.7;
+    filter: grayscale(1);          /* Removes the green/blue brand tint */
+    position: relative;
+}
+.paper-list li {
+    padding: 12px 0; /* Increase padding slightly */
+}
+ 
+/* ==========================================================================
+   7. FOOTER & MISC
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 3rem 5%;
+    background: #eeeeee;
+    margin-top: 4rem;
+}
+ 
+.main-footer p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+ 
+.footer-links a {
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+    margin: 0 0.5rem;
+}
+ 
+.request-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+ 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-blue);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+ 
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+ 
+/* Tablets and Below (768px) */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: center;
+    }
+    
+    .search-container {
+        width: 100%;
+        order: 2; /* Moves search below logo */
+    }
+ 
+    .search-container input {
+        width: 100%;
+    }
+ 
+    .portal-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 2rem;
+    }
+ 
+    .portal-selection {
+        margin-top: -1.5rem;
+    }
+   
+}
+ 
+/* Mobile Devices (600px) */
+@media (max-width: 600px) {
+    .subject-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .subject-card {
+        width: 100% !important;
+    }
+ 
+    .level-btn { 
+        padding: 0.6rem 0.8rem; 
+        font-size: 0.8rem; 
+    }
+ 
+    .paper-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 0;
+    }
+ 
+    .actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+ 
+    .download-link {
+        flex: 1; /* This makes buttons equal width on mobile */
+        min-width: 100px; /* Ensures they don't get too tiny */
+        text-align: center;
+    }
+    .actions {
+        flex-wrap: wrap; /* Allow wrapping only on mobile */
+        justify-content: flex-start;
+        
+    }
+ 
+}
+/* --- Request Modal Styles --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(3px);
+}
+ 
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%; /* Mobile responsive */
+    box-shadow: var(--shadow);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+ 
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+ 
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+ 
+.modal-content h2 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+ 
+.modal-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+ 
+/* Form Styling */
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+ 
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+.modal-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+ 
+.modal-select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 161, 222, 0.1);
+}
+ 
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+}
+ 
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+ 
+.submit-btn:hover {
+    background: var(--rwanda-green);
+    transform: translateY(-2px);
+}
+/* District Grid Layout */
+.district-grid {
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+/* Scrollable Level Tabs on Mobile */
+.switcher-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    justify-content: flex-start; /* Better for scrolling */
+}
+ 
+/* Badge for District Papers */
+.badge-mock {
+    background: var(--rwanda-green);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+ 
+/* Responsive Tweak for Paper Actions */
+.paper-list li {
+    display: flex;
+    flex-wrap: wrap; /* Prevents squishing on small screens */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+/* ==========================================================================
+   UPDATED RESPONSIVE FLOATING INSTAGRAM BUTTON
+   ========================================================================== */
+.floating-ig {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    width: auto;  /* Ensures container grows with text */
+    height: auto; /* Ensures container grows with text */
+}
+
+.floating-ig svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.floating-ig .ig-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap; /* Prevents text from breaking into two messy lines */
+}
+
+.floating-ig:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+}
+
+/* For standard mobile screens (e.g., iPhones, modern Androids) */
+@media (max-width: 480px) {
+    .floating-ig {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px; /* Margins scale down slightly to save screen space */
+    }
+    .floating-ig .ig-text {
+        font-size: 0.75rem; /* Text shrinks slightly to fit nicely next to the icon */
+    }
+    .floating-ig svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* For critically small devices (under 360px wide) */
+@media (max-width: 360px) {
+    .floating-ig {
+        padding: 10px;
+        border-radius: 50%; /* Changes back to a clean circle layout only when text cannot fit */
+    }
+    .floating-ig .ig-text {
+        display: none; /* Safely hides text so it won't block the user's screen layout */
+    }
+    .floating-ig svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+/* Mobile Header & Touch Targets */
+@media (max-width: 600px) {
+    .main-header {
+        padding: 0.8rem 3%; /* Reduced padding */
+    }
+    
+    .btn, .level-btn, .download-link {
+        min-height: 44px; /* Better touch targets for mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* ==========================================================================
+   SEARCH HIGHLIGHT — card glows when landed on via search
+   ========================================================================== */
+.subject-card.search-highlight {
+    border: 2px solid var(--rwanda-yellow) !important;
+    box-shadow: 0 0 0 4px rgba(250, 210, 1, 0.25), var(--shadow) !important;
+    animation: pulseHighlight 1.8s ease-out forwards;
+}
+ 
+@keyframes pulseHighlight {
+    0%   { box-shadow: 0 0 0 8px rgba(250, 210, 1, 0.4), var(--shadow); }
+    100% { box-shadow: 0 0 0 4px rgba(250, 210, 1, 0.15), var(--shadow); }
+}
