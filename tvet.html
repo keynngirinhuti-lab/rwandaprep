@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVET Past Papers & Marking Schemes | Rwanda Education Portal</title>
+    <!-- Modern Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style Sheet Reference -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       1. MAIN HEADER & NAVIGATION
+       ========================================== -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Rwanda<span>Exams</span>
+            </a>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search TVET trades, years, subjects..." aria-label="Search TVET papers">
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <a href="index.html">Home</a> &gt; <span>TVET Technical Exams</span>
+    </nav>
+
+    <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+    <section class="archive-hero">
+        <h1>TVET & RTB National Examinations</h1>
+        <p>Access official RTB/WDA past papers, practical assessment guidelines, and marking schemes for Level 3 to Level 5.</p>
+    </section>
+
+    <!-- ==========================================
+       3. LEVEL SWITCHER (L3, L4, L5)
+       ========================================== -->
+    <section class="level-switcher-section">
+        <div class="switcher-container">
+            <button class="level-btn active">Level 3 (L3)</button>
+            <button class="level-btn">Level 4 (L4)</button>
+            <button class="level-btn">Level 5 (L5)</button>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       4. SUBJECT & TRADE GRID
+       ========================================== -->
+    <main class="subject-grid-section">
+        
+        <!-- LEVEL 3 CONTENT -->
+        <div id="P6-content" class="level-content" style="display: block;">
+            <div class="subject-grid">
+
+                <!-- Trade Card 1 -->
+                <article class="subject-card" data-keywords="software development programming coding l3 tvet">
+                    <div class="card-header">
+                        <h3>Software Engineering</h3>
+                        <span class="badge-mock">L5 RTB</span>
+                    </div>
+                    <ul class="paper-list">
+                        <li>
+                            <span class="year">2025 Paper</span>
+                            <div class="actions">
+                                <a href="https://drive.google.com/file/d/1UHPZSdI8PT1hpn1pGheMymdarzBHn15J/view?usp=sharing" class="download-link view" target="_blank">View</a>
+                                <a href="https://drive.google.com/uc?export=download&confirm=1&id=1UHPZSdI8PT1hpn1pGheMymdarzBHn15J" download class="download-link download">Download</a>
+                                <a href="#" class="download-link scheme">Marking (soon)</a>
+                            </div>
+                        </li>
+                        <!--
+                        <li>
+                            <span class="year">2024 Paper</span>
+                            <div class="actions">
+                                <a href="papers/tvet/l3-sd-2022.pdf" class="download-link view" target="_blank">View</a>
+                                <a href="papers/tvet/l3-sd-2022.pdf" download class="download-link download">Download</a>
+                                <a href="schemes/tvet/l3-sd-2022-scheme.pdf" class="download-link scheme">Scheme</a>
+                            </div>
+                        </li>
+                        -->
+                    </ul>
+                </article>
+
+                <!-- Trade Card 2 -->
+                
+
+                <!-- Trade Card 3 -->
+                
+
+            </div>
+        </div>
+
+        <!-- LEVEL 4 CONTENT -->
+       
+
+        <!-- LEVEL 5 CONTENT -->
+        
+
+        <!-- Missing Paper Trigger Button -->
+        <div class="request-container">
+            <button id="openModalBtn" class="btn btn-blue">Can't find a TVET Paper? Request It Here</button>
+        </div>
+    </main>
+
+    <!-- ==========================================
+       5. REQUEST MODAL
+       ========================================== -->
+    <div id="requestModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Request a TVET Paper</h2>
+            <p>Tell us which trade or module exam paper you need, and we'll upload it soon.</p>
+            
+            <form action="?status=success" method="GET">
+                <div class="form-group">
+                    <label for="trade-select">Trade / Level</label>
+                    <select id="trade-select" class="modal-select" required>
+                        <option value="">Select Level...</option>
+                        <option value="L3">Level 3 (L3)</option>
+                        <option value="L4">Level 4 (L4)</option>
+                        <option value="L5">Level 5 (L5)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="paper-name">Module / Subject Name</label>
+                    <input type="text" id="paper-name" placeholder="e.g. Database Management Systems" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="paper-year">Year Needed</label>
+                    <input type="text" id="paper-year" placeholder="e.g. 2022 or 2023">
+                </div>
+
+                <button type="submit" class="submit-btn">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       6. FLOATING SOCIAL & FOOTER
+       ========================================== -->
+    <a href="https://instagram.com" target="_blank" class="floating-ig" aria-label="Follow us on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span class="ig-text">Follow Us</span>
+    </a>
+
+    <footer class="main-footer">
+        <p>&copy; Rwanda Education Portal. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="national.html">National Exams</a>
+            <a href="district.html">District Mocks</a>
+            <a href="#" id="openModalFooter">Request Paper</a>
+        </div>
+    </footer>
+
+    <!-- Script Reference -->
+    <script src="script.js"></script>
+</body>
+</html>
