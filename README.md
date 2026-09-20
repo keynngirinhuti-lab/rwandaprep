@@ -29,6 +29,7 @@ The website currently provides access to:
 * District-level examination papers
 * End-of-year examination papers
 * Available marking guides
+* REB books
 
 The resources are organized with links to their respective sources.
 
