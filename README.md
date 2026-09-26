@@ -72,6 +72,7 @@ I learned how to:
 * Deploy a website for real users
 * Maintain resources and links after launch
 * Think about how users discover and interact with a product
+* how to track users for my site using Google Analytics
 
 Most importantly, I learned that building a website is only one part of solving a problem. Understanding whether people actually use it and how they find it is also important.
 
