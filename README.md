@@ -6,7 +6,7 @@ RwandaPrep is a fast and responsive educational website that helps students find
 
 ## The Problem
 
-As a student, I found it difficult to find examination papers in one convenient place.
+As a student, I found it difficult to find examination papers ,Books and other educational resource in one convenient place.
 
 Before RwandaPrep, students could encounter several challenges:
 
@@ -28,7 +28,7 @@ The website currently provides access to:
 * National examination papers
 * District-level examination papers
 * End-of-year examination papers
-* Available marking guides
+* Plus Available marking guides
 * REB books
 * TVET Level 5 national examination papers
 
