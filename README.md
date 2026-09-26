@@ -91,7 +91,7 @@ I plan to continue improving the organization, usability, and availability of ex
 ## Links
 
 * **Website:** https://rwandaprep.netlify.app/
-* **Instagram:** RwandaPrep_official
+* **Instagram:** rwandaprep_official
 
 ## Note
 
