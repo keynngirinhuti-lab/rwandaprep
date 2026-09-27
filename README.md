@@ -1,12 +1,12 @@
 # RwandaPrep
-
-RwandaPrep is a fast and responsive educational website that helps students find and access past examination papers, including national examinations, district-level examinations, and end-of-year examinations and reb books .
+RwandaPrep is a fast and responsive educational website that helps students find and access past examination papers, including national examinations, district-level examinations,REB books,TVET exams, and end-of-year examinations.
 
 **Live website:** https://rwandaprep.netlify.app/
 
 ## The Problem
 
-As a student, I found it difficult to find examination papers ,Books and other educational resource in one convenient place.
+As a student, I found it difficult to find examination papers and books in one convenient place.
+
 
 Before RwandaPrep, students could encounter several challenges:
 
@@ -28,9 +28,11 @@ The website currently provides access to:
 * National examination papers
 * District-level examination papers
 * End-of-year examination papers
+<<<<<<< HEAD
 * Plus Available marking guides
 * REB books
 * TVET Level 5 national examination papers
+
 
 The resources are organized with links to their respective sources.
 
